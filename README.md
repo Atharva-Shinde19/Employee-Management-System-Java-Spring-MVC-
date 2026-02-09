@@ -42,38 +42,82 @@ It allows administrators and managers to perform operations such as adding, upda
 ---
 
 ## 📂 Project Structure
-'''
+
+```
 EmployeeManagementSystem
 │
 ├── src/main/java
-│ └── com.ems
-│ ├── controller
-│ │ └── EmployeeController.java
-│ │
-│ ├── service
-│ │ ├── EmployeeService.java
-│ │ └── EmployeeServiceImpl.java
-│ │
-│ ├── dao
-│ │ ├── EmployeeDAO.java
-│ │ └── EmployeeDAOImpl.java
-│ │
-│ ├── model
-│ │ └── Employee.java
-│ │
-│ └── config
-│ ├── HibernateConfig.java
-│ ├── SpringConfig.java
-│ └── SecurityConfig.java
+│   └── com.ems
+│       ├── controller
+│       │   └── EmployeeController.java
+│       │
+│       ├── service
+│       │   ├── EmployeeService.java
+│       │   └── EmployeeServiceImpl.java
+│       │
+│       ├── dao
+│       │   ├── EmployeeDAO.java
+│       │   └── EmployeeDAOImpl.java
+│       │
+│       ├── model
+│       │   └── Employee.java
+│       │
+│       └── config
+│           ├── HibernateConfig.java
+│           ├── SpringConfig.java
+│           └── SecurityConfig.java
 │
 ├── src/main/webapp
-│ ├── WEB-INF
-│ │ ├── views
-│ │ │ ├── add-employee.jsp
-│ │ │ ├── update-employee.jsp
-│ │ │ └── list-employees.jsp
-│ │ └── web.xml
+│   ├── WEB-INF
+│   │   ├── views
+│   │   │   ├── add-employee.jsp
+│   │   │   ├── update-employee.jsp
+│   │   │   └── list-employees.jsp
+│   │   └── web.xml
 │
 ├── pom.xml
 └── README.md
-'''
+```
+
+
+---
+
+## 🗄️ Database Schema
+
+### `employee`
+```sql
+CREATE TABLE employee (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    department VARCHAR(50),
+    salary DOUBLE,
+    role VARCHAR(50)
+);
+
+
+CREATE TABLE users (
+    username VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(100),
+    enabled BOOLEAN
+);
+
+CREATE TABLE authorities (
+    username VARCHAR(50),
+    authority VARCHAR(50)
+);
+```
+
+## 🌱 Future Enhancements
+
+- Convert to Spring Boot
+
+- REST APIs
+
+- React frontend
+
+- Password encryption (BCrypt)
+
+- Pagination & search
+
+- Docker support
