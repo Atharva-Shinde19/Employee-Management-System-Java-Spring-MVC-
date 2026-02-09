@@ -42,4 +42,38 @@ It allows administrators and managers to perform operations such as adding, upda
 ---
 
 ## 📂 Project Structure
-
+'''
+EmployeeManagementSystem
+│
+├── src/main/java
+│ └── com.ems
+│ ├── controller
+│ │ └── EmployeeController.java
+│ │
+│ ├── service
+│ │ ├── EmployeeService.java
+│ │ └── EmployeeServiceImpl.java
+│ │
+│ ├── dao
+│ │ ├── EmployeeDAO.java
+│ │ └── EmployeeDAOImpl.java
+│ │
+│ ├── model
+│ │ └── Employee.java
+│ │
+│ └── config
+│ ├── HibernateConfig.java
+│ ├── SpringConfig.java
+│ └── SecurityConfig.java
+│
+├── src/main/webapp
+│ ├── WEB-INF
+│ │ ├── views
+│ │ │ ├── add-employee.jsp
+│ │ │ ├── update-employee.jsp
+│ │ │ └── list-employees.jsp
+│ │ └── web.xml
+│
+├── pom.xml
+└── README.md
+'''
